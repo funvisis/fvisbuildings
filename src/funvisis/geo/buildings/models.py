@@ -142,19 +142,19 @@ class Building(models.Model):
             u' grandes paneles o de pórticos')
     confined_load_bearing_mosonry = models.BooleanField(
         verbose_name=u'Sistemas cuyos elementos portantes' \
-            u'sean mampostería confinada')
+            u' sean mampostería confinada')
     confined_load_bearing_mosonry_floors = models.IntegerField(
-        verbose_name=u'Pisos', blank=True, null=True)
+        verbose_name=u'Pisos de mapostería confinada', blank=True, null=True)
     not_confined_load_bearing_masonry = models.BooleanField(
         verbose_name=u'Sistemas cuyos elementos portantes' \
             u' sean muros de mampostería no confinada')
     not_confined_load_bearing_mosonry_floors = models.IntegerField(
-        verbose_name=u'Pisos', blank=True, null=True)
+        verbose_name=u'Pisos de mampostería no confinada', blank=True, null=True)
     mixed_systems_frames_bearing_mosonry = models.BooleanField(
         verbose_name=u'Sistemas  mixtos de pórticos y de' \
             u' mampostería de baja calidad de construcción.')
     mixed_systems_frames_bearing_mosonry_floors = models.IntegerField(
-        verbose_name=u'Pisos', blank=True, null=True)
+        verbose_name=u'Pisos de mamposteria de baja calidad', blank=True, null=True)
     one_floor_adobe_house = models.BooleanField(
         verbose_name=u'Viviendas de bahareque de un piso')
     precarious_housing = models.BooleanField(
@@ -206,9 +206,9 @@ class Building(models.Model):
     one_direction_wall_abscense = models.BooleanField(
         verbose_name=u'Ausencia de muros en una dirección')
     attaching_slab_slab = models.BooleanField(
-         verbose_name='12.8 Adosamiento: Losa contra losa') # REVISAR
+         verbose_name='Adosamiento: Losa contra losa') # REVISAR
     attaching_slab_column = models.BooleanField(
-         verbose_name='12.9 Adosamiento: Columna contra losa') # REVISAR
+         verbose_name='Adosamiento: Columna contra losa') # REVISAR
     #attaching_slab_slab_column = models.CharField(
     #    max_length=15,
     #    verbose_name=u'Tipo de adosamiento',
